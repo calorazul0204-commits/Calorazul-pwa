@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CALORAZUL Assistência</title>
+  <meta name="theme-color" content="#0055b8">
+  <meta name="description" content="PWA da CALORAZUL, LDA para assistência técnica, climatização, eletrodomésticos e manutenção preventiva.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <img src="assets/logo-calorazul.jpeg" alt="Logótipo CALORAZUL" class="logo">
+    <button id="installBtn" class="install" hidden>Instalar App</button>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Conforto · Eficiência · Confiança</p>
+        <h1>Assistência técnica sempre à mão</h1>
+        <p>Climatização, bombas de calor, eletrodomésticos e manutenção preventiva em Bragança.</p>
+      </div>
+      <div class="quick-actions">
+        <a class="primary" href="#assistencia">Pedir assistência</a>
+        <a class="secondary" href="tel:+351917579808">Ligar agora</a>
+      </div>
+    </section>
+
+    <section class="grid menu">
+      <a href="#assistencia" class="tile">🔧<span>Assistência</span></a>
+      <a href="#orcamento" class="tile">🧾<span>Orçamento</span></a>
+      <a href="#instalacao" class="tile">📅<span>Instalação</span></a>
+      <a href="#manutencao" class="tile">🛡️<span>Manutenção</span></a>
+      <a href="#cliente" class="tile">👤<span>Área Cliente</span></a>
+      <a href="#empresas" class="tile">🏢<span>Empresas/IPSS</span></a>
+    </section>
+
+    <section id="assistencia" class="card">
+      <h2>Pedir assistência técnica</h2>
+      <form id="serviceForm">
+        <label>Nome<input required name="nome" placeholder="O seu nome"></label>
+        <label>Telefone<input required name="telefone" inputmode="tel" placeholder="917 579 808"></label>
+        <label>Morada<input name="morada" placeholder="Rua, localidade"></label>
+        <label>Equipamento
+          <select name="equipamento">
+            <option>Ar condicionado</option><option>Bomba de calor</option><option>Frigorífico</option><option>Máquina de lavar</option><option>Forno/Placa</option><option>Outro</option>
+          </select>
+        </label>
+        <label>Descrição da avaria<textarea name="descricao" rows="4" placeholder="Explique o problema"></textarea></label>
+        <label>Fotografia da avaria<input type="file" accept="image/*" capture="environment"></label>
+        <button type="submit">Enviar pedido por WhatsApp</button>
+      </form>
+    </section>
+
+    <section id="orcamento" class="card">
+      <h2>Pedir orçamento</h2>
+      <p>Receba orçamento para ar condicionado, bombas de calor, eletrodomésticos e manutenção.</p>
+      <a class="primary full" href="mailto:calorazul0204@gmail.com?subject=Pedido%20de%20or%C3%A7amento%20CALORAZUL">Enviar email</a>
+    </section>
+
+    <section id="instalacao" class="card">
+      <h2>Marcar instalação</h2>
+      <p>Escolha o serviço, envie a morada e a data pretendida. A CALORAZUL confirma a disponibilidade.</p>
+      <a class="primary full" href="https://wa.me/351917579808?text=Ol%C3%A1%20CALORAZUL%2C%20quero%20marcar%20uma%20instala%C3%A7%C3%A3o.">Marcar pelo WhatsApp</a>
+    </section>
+
+    <section id="manutencao" class="card">
+      <h2>Manutenção preventiva</h2>
+      <ul>
+        <li>Limpeza de filtros</li><li>Revisão anual</li><li>Verificação de funcionamento</li><li>Lembretes de manutenção</li>
+      </ul>
+    </section>
+
+    <section id="cliente" class="card">
+      <h2>Área Cliente</h2>
+      <p>Futuramente terá equipamentos instalados, garantias, faturas e histórico de intervenções.</p>
+    </section>
+
+    <section id="empresas" class="card highlight">
+      <h2>Empresas e IPSS</h2>
+      <p>Contratos de manutenção, pedidos prioritários, relatórios técnicos e faturação mensal.</p>
+      <a class="primary full" href="https://wa.me/351917579808?text=Ol%C3%A1%20CALORAZUL%2C%20quero%20informa%C3%A7%C3%B5es%20para%20empresa%20ou%20IPSS.">Falar com a CALORAZUL</a>
+    </section>
+  </main>
+
+  <nav class="bottomnav">
+    <a href="#">Início</a><a href="#assistencia">Pedidos</a><a href="#cliente">Cliente</a><a href="#empresas">IPSS</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
